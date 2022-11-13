@@ -1,0 +1,35 @@
+<div class="container-fluid mt-5 mb-5 text-center d-flex justify-content-center">
+  <div class="card" style="max-width: 700px;">
+		<div class="card-header">
+		<ul class="nav nav-tabs card-header-tabs nav-justified">
+			<li class="nav-item">
+			<a class="nav-link active" id="income-tab" data-toggle="tab" [routerLink]="['/navigator']" [queryParams]="{ tab: '0' }">Income</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" id="outcome-tab" data-toggle="tab" [routerLink]="['/navigator']" [queryParams]="{ tab: '1' }">Outcome</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" id="loans-tab" data-toggle="tab" [routerLink]="['/navigator']" [queryParams]="{ tab: '2' }">Loans</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" id="investments-tab" data-toggle="tab" [routerLink]="['/navigator']" [queryParams]="{ tab: '3' }">Investments</a>
+			</li>
+		</ul>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item pt-4 pb-0 mb-3 ml-1 mr-1">
+				<div class="row">
+				<div class="col-6"><span>Name</span></div>
+				<div class="col-6"><span>Acount</span></div>
+				</div>
+			</li>
+			<div *ngIf="acountCounts">
+        <div class="tab-content">
+          <app-acount-counts-pos
+          *ngFor="let filteredCountsPos of filteredCounts; let i = index" [acountCountsPos] = "filteredCountsPos" [lastPos] = "i === (filteredCounts.length - 1)">
+          </app-acount-counts-pos>
+        </div>
+      </div>
+		</ul>
+	</div>
+</div>
