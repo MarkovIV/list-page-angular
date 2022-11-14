@@ -1,15 +1,12 @@
 {
   "name": "transaction-app-angular",
   "version": "0.0.0",
-  "homepage": "https://markoviv.github.io/list-page-angular/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +18,6 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "gh-pages": "^4.0.0",
     "install": "^0.13.0",
     "npm": "^9.1.1",
     "rxjs": "~7.5.0",
