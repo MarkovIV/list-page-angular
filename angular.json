@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "transaction-app-angular": {
+    "list-page-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/transaction-app-angular",
+            "outputPath": "dist/list-page-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "transaction-app-angular:build:production"
+              "browserTarget": "list-page-angular:build:production"
             },
             "development": {
-              "browserTarget": "transaction-app-angular:build:development"
+              "browserTarget": "list-page-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "transaction-app-angular:build"
+            "browserTarget": "list-page-angular:build"
           }
         },
         "test": {
