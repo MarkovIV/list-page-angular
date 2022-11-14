@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{transationsByTypeCount}}</h5>
+    <p class="card-text">{{typeStr}}</p>
+    <div class="d-flex justify-content-right">
+      <div class='w-100'></div>
+      <div>
+        <a class="btn btn-primary" [routerLink]="['/navigator']" [queryParams]="{ tab: typeNum }">See all</a>
+      </div>
+    </div>
+  </div>
+</div>

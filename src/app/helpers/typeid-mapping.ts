@@ -10,3 +10,16 @@ export const typeIdMapping = (typeInt: string) => {
       return 'income'
   }
 }
+
+export const typeIdMappingReverse = (typeStr: string) => {
+	switch (typeStr) {
+    case 'outcome':
+      return '1'
+    case 'loan':
+      return '2'
+    case 'investment':
+      return '3'
+    default:
+      return '0'
+  }
+}

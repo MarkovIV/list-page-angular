@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { transactions as data} from '../../data/transactions'
 
 @Component({
   selector: 'app-summary-page',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary-page.component.scss']
 })
 export class SummaryPageComponent implements OnInit {
+  transactions = data
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

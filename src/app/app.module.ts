@@ -5,7 +5,9 @@ import { AppComponent } from './app.component'
 import { ListPageComponent } from './pages/list-page/list-page.component'
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component'
 import { AcountCountsPosComponent } from './components/acount-counts-pos/acount-counts-pos.component'
-import { NotFoundComponent } from './pages/not-found/not-found.component'
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HeadingCardComponent } from './components/heading-card/heading-card.component';
+import { TypeCardComponent } from './components/type-card/type-card.component'
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component'
     ListPageComponent,
     SummaryPageComponent,
     AcountCountsPosComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeadingCardComponent,
+    TypeCardComponent
   ],
   imports: [
     BrowserModule,
