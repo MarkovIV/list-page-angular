@@ -1,23 +1,52 @@
 <div class="container mt-5">
+  <div *ngIf="isDesktopScreen">
+    <div class="row justify-content-center mb-2">
+      <div class="col-8">
+          <app-heading-card [transactions] = "transactions"></app-heading-card>
+      </div>
+    </div>
   <div class="row justify-content-center mb-2">
-    <div class="col-6">
-        <app-heading-card [transactions] = "transactions"></app-heading-card>
-     </div>
+      <div class="col-4">
+        <app-type-card [transactions] = "transactions" [typeStr] = "'income'"></app-type-card>
+      </div>
+      <div class="col-4">
+        <app-type-card [transactions] = "transactions" [typeStr] = "'investment'"></app-type-card>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-2">
+      <div class="col-4">
+        <app-type-card [transactions] = "transactions" [typeStr] = "'outcome'"></app-type-card>
+      </div>
+      <div class="col-4">
+        <app-type-card [transactions] = "transactions" [typeStr] = "'loan'"></app-type-card>
+      </div>
+    </div>
   </div>
- <div class="row justify-content-center mb-2">
-    <div class="col-3">
-      <app-type-card [transactions] = "transactions" [typeStr] = "'income'"></app-type-card>
+  <div *ngIf="!isDesktopScreen">
+    <div class="row justify-content-center mb-2">
+      <div class="col-12">
+        <app-heading-card [transactions]="transactions"></app-heading-card>
+      </div>
     </div>
-    <div class="col-3">
-      <app-type-card [transactions] = "transactions" [typeStr] = "'investment'"></app-type-card>
+    <div class="row justify-content-center mb-2">
+      <div class="col-12">
+        <app-type-card [transactions]="transactions" [typeStr]="'income'"></app-type-card>
+      </div>
     </div>
-  </div>
-  <div class="row justify-content-center mb-2">
-    <div class="col-3">
-      <app-type-card [transactions] = "transactions" [typeStr] = "'outcome'"></app-type-card>
+    <div class="row justify-content-center mb-2">
+      <div class="col-12">
+        <app-type-card [transactions]="transactions" [typeStr]="'outcome'"></app-type-card>
+      </div>
     </div>
-    <div class="col-3">
-      <app-type-card [transactions] = "transactions" [typeStr] = "'loan'"></app-type-card>
+    <div class="row justify-content-center mb-2">
+      <div class="col-12">
+        <app-type-card [transactions]="transactions" [typeStr]="'loan'"></app-type-card>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-2">
+      <div class="col-12">
+        <app-type-card [transactions]="transactions" [typeStr]="'investment'"></app-type-card>
+      </div>
     </div>
   </div>
 </div>

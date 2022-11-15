@@ -8,6 +8,7 @@ import { AcountCountsPosComponent } from './components/acount-counts-pos/acount-
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeadingCardComponent } from './components/heading-card/heading-card.component';
 import { TypeCardComponent } from './components/type-card/type-card.component'
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TypeCardComponent } from './components/type-card/type-card.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
